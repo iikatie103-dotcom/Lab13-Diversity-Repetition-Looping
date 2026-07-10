@@ -30,9 +30,43 @@ public class BarGraph
 	 */
 	public static String getHorizontal(int value)
 	{
-		String bar;
-		
-		bar = "TODO"; //TODO: replace this with code that actually generates the bar graph!
+		String bar = "";
+		int length = value / 8;
+		while (length > 0){
+			bar = bar + BLOCK_EIGTH_8;
+			length--;
+		}
+		int remainderBar;
+		remainderBar = value % 8;
+		if (remainderBar != 0){
+			switch (remainderBar)
+			{
+				case 1:
+					bar += BLOCK_EIGTH_1;
+					break;
+				case 2:
+					bar += BLOCK_EIGTH_2;
+					break;
+				case 3:
+					bar += BLOCK_EIGTH_3;
+					break;
+				case 4:
+					bar += BLOCK_EIGTH_4;
+					break;
+				case 5:
+					bar += BLOCK_EIGTH_5;
+					break;
+				case 6:
+					bar += BLOCK_EIGTH_6;
+					break;
+				case 7:
+					bar += BLOCK_EIGTH_7;
+					break;
+			}
+			bar += value;
+		}
+
+
 		
 		return bar;
 	}
