@@ -63,11 +63,9 @@ public class BarGraph
 					bar += BLOCK_EIGTH_7;
 					break;
 			}
-			bar += value;
+
 		}
-
-
-		
+		bar += " " + value;
 		return bar;
 	}
 }
